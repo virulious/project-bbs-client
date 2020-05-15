@@ -1,6 +1,7 @@
 'use strict'
 
 const store = require('../store')
+const indexPostTemplate = require('../templates/post-listing.handlebars')
 
 const messageFail = function () {
   $('.message').removeClass('success')
@@ -91,6 +92,15 @@ const signOutFailure = function (error) {
   console.error('signOutFailure ran. Error is :', error)
 }
 
+const indexPostSuccess = (data) => {
+  const indexPostHtml = indexPostTemplate({ posts: data.posts })
+  $('.posts').html(indexPostHtml)
+}
+
+const createPostSuccess = (data) => {
+  console.log('Did it make the post? Yes?')
+}
+
 module.exports = {
   signUpSuccess,
   signInSuccess,
@@ -99,5 +109,7 @@ module.exports = {
   signUpFailure,
   signInFailure,
   signOutFailure,
-  changePasswordFailure
+  changePasswordFailure,
+  indexPostSuccess,
+  createPostSuccess
 }

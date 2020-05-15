@@ -20,4 +20,6 @@ $(() => {
   $('#sign-out').on('submit', authEvents.onSignOut)
   // Event listener for Index Post:
   $('#index-post').on('click', authEvents.onIndexPost)
+  // Event listener to Create Post:
+  $('#create-post').on('submit', authEvents.onCreatePost)
 })

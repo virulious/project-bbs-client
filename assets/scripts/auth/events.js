@@ -52,8 +52,19 @@ const onSignOut = function (event) {
 const onIndexPost = function (event) {
   event.preventDefault()
   api.indexPost()
-    .then()
-    .catch()
+    .then(ui.indexPostSuccess)
+    .catch(console.error)
+}
+
+const onCreatePost = function (event) {
+  event.preventDefault()
+
+  const form = event.target
+  const formData = getFormFields(form)
+
+  api.createPost(formData)
+    .then(ui.createPostSucces)
+    .catch(console.error)
 }
 
 module.exports = {
@@ -61,5 +72,6 @@ module.exports = {
   onSignIn,
   onChangePassword,
   onSignOut,
-  onIndexPost
+  onIndexPost,
+  onCreatePost
 }

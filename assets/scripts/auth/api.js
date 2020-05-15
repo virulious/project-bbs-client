@@ -47,10 +47,22 @@ const indexPost = function () {
   })
 }
 
+const createPost = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/posts',
+    method: 'POST',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: data
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   changePassword,
   signOut,
-  indexPost
+  indexPost,
+  createPost
 }

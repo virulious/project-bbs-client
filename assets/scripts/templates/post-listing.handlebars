@@ -3,18 +3,16 @@
   <section data-id="{{post.id}}">
     <h6>Title:</h6>
     <h3>
-      {{limit post.title 15}}
+      {{post.title}}
     </h3>
     <h6>User:</h6>
     <p>
       {{#if post.user}}
         {{post.user}}
       {{else}}
-        No author provided.
+        No user provided.
       {{/if}}
     </p>
-    <button class="btn btn-danger" data-id="{{post.id}}">Remove Post</button>
-    <!-- {{> partial}} -->
   </section>
 
 {{/each}}

@@ -50,8 +50,9 @@
         <div class="authenticated">
           <button id="index-post" type="submit">Show post</button>
           <p class="posts"></p>
-          <form>
-            <input id="text-post" required type="text" name="create-post">
+          <form id="create-post">
+            <input required type="text" name="post[title]" placeholder="Post title">
+            <input required type="text" name="post[body]" placeholder="Post text">
             <button type="submit">Post</button>
           </form>
         </div>
