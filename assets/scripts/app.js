@@ -22,4 +22,8 @@ $(() => {
   $('#index-post').on('click', authEvents.onIndexPost)
   // Event listener to Create Post:
   $('#create-post').on('submit', authEvents.onCreatePost)
+  // Event listener to Show Post:
+  $('#find-post').on('submit', authEvents.onFindPost)
+  // Event listener to Delete Post
+  $('.posts').on('click', '.delete-post', authEvents.onDeletePost)
 })

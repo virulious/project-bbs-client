@@ -43,7 +43,11 @@ const signOut = function (data) {
 
 const indexPost = function () {
   return $.ajax({
-    url: config.apiUrl + '/posts'
+    url: config.apiUrl + '/posts',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
   })
 }
 
@@ -58,11 +62,35 @@ const createPost = function (data) {
   })
 }
 
+const findPost = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/posts/' + data,
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: data
+  })
+}
+
+const deletePost = function (data) {
+  console.log(data)
+  return $.ajax({
+    url: config.apiUrl + '/posts/' + data,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   changePassword,
   signOut,
   indexPost,
-  createPost
+  createPost,
+  findPost,
+  deletePost
 }

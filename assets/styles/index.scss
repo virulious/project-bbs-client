@@ -4,6 +4,7 @@ $font-color: rgba(255, 87, 75, 1);
 $body-bg-color: rgba(75, 207, 255, .3);
 $side-bar: rgba(141, 255, 75, .6);
 $post-bg-color: rgba(231, 255, 75, .8);
+$shadow: #808080;
 $success: #008000;
 $fail: #f00;
 $nanum-gothic: 'Nanum Gothic', sans-serif;
@@ -21,13 +22,14 @@ main {
 
 .posts {
   background-color: $post-bg-color;
-  box-shadow: 5px 5px 5px grey;
+  box-shadow: 5px 5px 5px $shadow;
   color: $font-color;
   font-family: $nanum-gothic;
   height: 200px;
-  margin-left: 50px;
-  margin-top: 100px;
-  width: 350px;
+  margin-left: 25px;
+  margin-top: 50px;
+  overflow: auto;
+  width: 400px;
 }
 
 .success {
@@ -61,6 +63,7 @@ main {
 
 #create-post {
   height: 75px;
-  margin-left: 50px;
-  width: 300px;
+  margin-left: 25px;
+  margin-top: 15px;
+  width: 400px;
 }

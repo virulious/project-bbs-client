@@ -48,8 +48,12 @@
       <main>
         <h1>Project 2</h1>
         <div class="authenticated">
-          <button id="index-post" type="submit">Show post</button>
-          <p class="posts"></p>
+          <button id="index-post" type="submit">Index posts</button>
+          <form id="find-post">
+            <input required type="text" name="posts[title]" placeholder="Title">
+            <button type="submit">Find Post</button>
+          </form>
+          <div class="posts"></div>
           <form id="create-post">
             <input required type="text" name="post[title]" placeholder="Post title">
             <input required type="text" name="post[body]" placeholder="Post text">

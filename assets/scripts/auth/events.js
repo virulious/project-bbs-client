@@ -63,7 +63,31 @@ const onCreatePost = function (event) {
   const formData = getFormFields(form)
 
   api.createPost(formData)
-    .then(ui.createPostSucces)
+    .then(api.indexPost)
+    .then(ui.createPostSuccess)
+    .catch(console.error)
+}
+
+const onFindPost = function (event) {
+  event.preventDefault()
+
+  const form = event.target
+  const formData = getFormFields(form)
+
+  api.findPost(formData)
+    .then(ui.findPostSuccess)
+    .catch(console.error)
+}
+
+const onDeletePost = (event) => {
+  event.preventDefault()
+  console.log(event.target)
+  const postId = $(event.target).data('id')
+  console.log(postId)
+  api.deletePost(postId)
+    .then(function () {
+      onIndexPost(event)
+    })
     .catch(console.error)
 }
 
@@ -73,5 +97,7 @@ module.exports = {
   onChangePassword,
   onSignOut,
   onIndexPost,
-  onCreatePost
+  onCreatePost,
+  onFindPost,
+  onDeletePost
 }
