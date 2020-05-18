@@ -17,7 +17,6 @@ const messageSuccess = function () {
 const signUpSuccess = function (data) {
   $('.message').text('Sign up successfull')
   messageSuccess()
-  // console.log(`signUpSuccess ran. Data is:`, data)
 
   $('form').trigger('reset')
 }
@@ -25,7 +24,6 @@ const signUpSuccess = function (data) {
 const signUpFailure = function (error) {
   $('.message').text('Sign up failed!')
   messageFail()
-  // console.log(`signUpFailure ran. Error is:`, error)
 
   $('form').trigger('reset')
   return error
@@ -35,7 +33,6 @@ const signUpFailure = function (error) {
 const signInSuccess = function (data) {
   $('.message').text('Sign in successfull')
   messageSuccess()
-  // console.log(`signInSuccess ran. Data is:`, data)
 
   store.user = data.user
 
@@ -48,7 +45,6 @@ const signInSuccess = function (data) {
 const signInFailure = function (error) {
   $('.message').text('Sign in failed!')
   messageFail()
-  // console.log(`signInFailure ran. Error is:`, error)
 
   $('form').trigger('reset')
   return error
@@ -58,7 +54,6 @@ const signInFailure = function (error) {
 const changePasswordSuccess = function (data) {
   $('.message').text('Changed password successfully!')
   messageSuccess()
-  // console.log(`changePasswordSuccess ran. Data is:`, data)
 
   $('form').trigger('reset')
 }
@@ -66,7 +61,6 @@ const changePasswordSuccess = function (data) {
 const changePasswordFailure = function (error) {
   $('.message').text('Change password failed!')
   messageFail()
-  // console.log(`changePasswordFailure ran. Error is:`, error)
 
   $('form').trigger('reset')
   return error
@@ -76,7 +70,6 @@ const changePasswordFailure = function (error) {
 const signOutSuccess = function (data) {
   $('.message').text('Sign out successfull')
   messageSuccess()
-  // console.log(`signOutSuccess ran. Data is:`, data)
 
   $('form').trigger('reset')
 

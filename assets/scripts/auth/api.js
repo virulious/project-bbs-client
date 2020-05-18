@@ -20,7 +20,6 @@ const signIn = function (data) {
 }
 
 const changePassword = function (data) {
-  // console.log(store.user)
   return $.ajax({
     url: config.apiUrl + '/change-password',
     method: 'PATCH',
@@ -85,7 +84,6 @@ const updatePost = function (data) {
 }
 
 const deletePost = function (data) {
-  console.log(data)
   return $.ajax({
     url: config.apiUrl + '/posts/' + data,
     method: 'DELETE',
