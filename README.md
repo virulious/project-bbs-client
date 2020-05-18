@@ -11,7 +11,7 @@ and read comments.
 ## Important Links
 
 - [Other Repo]https://github.com/virulious/project-bbs-api
-- [Deployed API]https://young-eyrie-49492.herokuapp.com/
+- [Deployed API]https://young-eyrie-49492.herokuapp.com
 - [Deployed Client]https://virulious.github.io/project-bbs-client/
 
 ## Planning Story
