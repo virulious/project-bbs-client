@@ -72,6 +72,7 @@ const signOutSuccess = function (data) {
   messageSuccess()
 
   $('form').trigger('reset')
+  $('.posts').html(null)
 
   $('.authenticated').hide()
   $('.unauthenticated').show()
@@ -91,6 +92,8 @@ const indexPostSuccess = (data) => {
 }
 
 const createPostSuccess = (data) => {
+  $('form').trigger('reset')
+
   const indexPostHtml = indexPostTemplate({ posts: data.posts })
   $('.posts').html(indexPostHtml)
 }
@@ -101,6 +104,8 @@ const findPostSuccess = (data) => {
 }
 
 const updatePostSuccess = (data) => {
+  $('form').trigger('reset')
+
   const indexPostHtml = indexPostTemplate({ posts: data.posts })
   $('.posts').html(indexPostHtml)
 }
