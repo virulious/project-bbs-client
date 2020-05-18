@@ -12,7 +12,7 @@ bbs.
 ## Important Links
 
 - [Other Repo]https://github.com/virulious/project-bbs-api
-- [Deployed API](www.link.com)
+- [Deployed API]https://git.heroku.com/young-eyrie-49492.git
 - [Deployed Client](www.link.com)
 
 ## Planning Story
@@ -38,8 +38,8 @@ bbs.
 
 ### Unsolved Problems
 
-- Still need to ....
-- Would like to eventually ....
+- Still need to improve visual aspects of the viewport
+- Would like to eventually add more boxes for comments on the post and individualize the posts
 
 ## Images
 

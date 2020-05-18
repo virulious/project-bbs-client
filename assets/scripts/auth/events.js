@@ -73,8 +73,9 @@ const onFindPost = function (event) {
 
   const form = event.target
   const formData = getFormFields(form)
+  const title = formData.posts.title
 
-  api.findPost(formData)
+  api.findPost(title)
     .then(ui.findPostSuccess)
     .catch(console.error)
 }
