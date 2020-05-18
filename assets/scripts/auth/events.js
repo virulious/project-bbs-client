@@ -80,11 +80,21 @@ const onFindPost = function (event) {
     .catch(console.error)
 }
 
+const onUpdatePost = function (event) {
+  event.preventDefault()
+
+  const form = event.target
+  const formData = getFormFields(form)
+
+  api.updatePost(formData)
+    .then(api.indexPost)
+    .then(ui.updatePostSuccess)
+    .catch(console.error)
+}
+
 const onDeletePost = (event) => {
   event.preventDefault()
-  console.log(event.target)
   const postId = $(event.target).data('id')
-  console.log(postId)
   api.deletePost(postId)
     .then(function () {
       onIndexPost(event)
@@ -100,5 +110,6 @@ module.exports = {
   onIndexPost,
   onCreatePost,
   onFindPost,
+  onUpdatePost,
   onDeletePost
 }

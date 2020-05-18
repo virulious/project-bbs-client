@@ -73,6 +73,17 @@ const findPost = function (data) {
   })
 }
 
+const updatePost = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/posts/' + data,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: data
+  })
+}
+
 const deletePost = function (data) {
   console.log(data)
   return $.ajax({
@@ -92,5 +103,6 @@ module.exports = {
   indexPost,
   createPost,
   findPost,
+  updatePost,
   deletePost
 }

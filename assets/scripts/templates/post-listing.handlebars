@@ -7,7 +7,7 @@
       {{post.body}}
     </h6>
     <h6>Post ID: {{post._id}}</h6>
-    <h6>User: {{#if post.user}}{{post.user}}{{else}}No user provided.{{/if}}</h6>
+    <h6>Owner: {{#if post.owner}}{{post.owner}}{{else}}No owner provided.{{/if}}</h6>
     <button class="btn btn-danger delete-post" data-id="{{post._id}}">Remove Post</button>
     <h6>---------------------</h6>
   </section>

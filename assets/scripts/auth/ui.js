@@ -103,7 +103,11 @@ const createPostSuccess = (data) => {
 }
 
 const findPostSuccess = (data) => {
-  console.log(data)
+  const indexPostHtml = indexPostTemplate({ posts: data })
+  $('.posts').html(indexPostHtml)
+}
+
+const updatePostSuccess = (data) => {
   const indexPostHtml = indexPostTemplate({ posts: data.posts })
   $('.posts').html(indexPostHtml)
 }
@@ -119,5 +123,6 @@ module.exports = {
   changePasswordFailure,
   indexPostSuccess,
   createPostSuccess,
-  findPostSuccess
+  findPostSuccess,
+  updatePostSuccess
 }
