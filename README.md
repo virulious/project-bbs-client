@@ -16,7 +16,9 @@ and read comments.
 
 ## Planning Story
 
-
+- Plan out the layout with a wireframe
+- Plan out resource relations with an ERD
+- Review past projects for guidance
 
 ### User Stories
 
@@ -39,6 +41,7 @@ and read comments.
 
 - Still need to improve visual aspects of the viewport
 - Would like to eventually add more boxes for comments on the post and individualize the posts
+- Make the text boxes for the bodies of posts bigger
 
 ## Images
 
