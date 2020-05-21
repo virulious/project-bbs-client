@@ -1,15 +1,15 @@
-{{#each posts as |post|}}
-  {{log post}}
-  <section data-id="{{post._id}}">
-    <h6>Title: {{post.title}}</h6>
-    <h6>Body:</h6>
-    <h6>
-      {{post.body}}
-    </h6>
-    <h6>Post ID: {{post._id}}</h6>
-    <h6>Owner: {{#if post.owner}}{{post.owner}}{{else}}No owner provided.{{/if}}</h6>
-    <button class="btn btn-danger delete-post" data-id="{{post._id}}">Remove Post</button>
-    <h6>---------------------</h6>
-  </section>
-
-{{/each}}
+{{#if posts}}
+  {{#each posts as |post|}}
+    <section data-id="{{post._id}}">
+      <h6>Title: {{post.title}}</h6>
+      <h6>Body:</h6>
+      <h6>
+        {{post.body}}
+      </h6>
+      <h6>Post ID: {{post._id}}</h6>
+      <h6>Owner: {{#if post.owner}}{{post.owner}}{{else}}No owner provided.{{/if}}</h6>
+      <button class="btn btn-danger delete-post" data-id="{{post._id}}">Remove Post</button>
+      <h6>---------------------</h6>
+    </section>
+  {{/each}}
+{{else}}<h6>No posts</h6>{{/if}}

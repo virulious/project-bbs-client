@@ -10,9 +10,9 @@ and read comments.
 
 ## Important Links
 
-- [Other Repo]https://github.com/virulious/project-bbs-api
-- [Deployed API]https://young-eyrie-49492.herokuapp.com
-- [Deployed Client]https://virulious.github.io/project-bbs-client/
+- [Other Repo][https://github.com/virulious/project-bbs-api]
+- [Deployed API][https://young-eyrie-49492.herokuapp.com]
+- [Deployed Client][https://virulious.github.io/project-bbs-client/]
 
 ## Planning Story
 
@@ -48,4 +48,4 @@ and read comments.
 ---
 
 #### Wireframe/ERD:
-![wireframe]https://app.moqups.com/MMiyxifw0a/edit/page/aa9df7b72
+![wireframe/ERD][https://imgur.com/REccEGv]
