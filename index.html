@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Proj2</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <section class="side-bar">
+        <section class="user-buttons">
+          <div class="unauthenticated">
+            <p class="message"></p>
+            <form id="sign-up">
+              <input required type="text" placeholder="User Email" name="credentials[email]">
+              <input required type="password" placeholder="User Password" name="credentials[password]">
+              <input required type="password" placeholder="User Password" name="credentials[password_confirmation]">
+              <button type="submit">Sign Up</button>
+            </form>
+            <form id="sign-in">
+              <input required type="text" placeholder="User Email" name="credentials[email]">
+              <input required type="password" placeholder="User Password" name="credentials[password]">
+              <button type="submit">Sign In</button>
+            </form>
+          </div>
+        </section>
+        <div class="authenticated">
+          <h2 id="user"></h2>
+          <section class="user-buttons">
+            <form id="sign-out">
+              <button type="submit">Sign Out</button>
+            </form>
+            <form id="change-password">
+              <input required type="password" name="passwords[old]" placeholder="Old Password">
+              <input required type="password" name="passwords[new]" placeholder="New Password">
+              <button type="submit">Change Password</button>
+            </form>
+            <div class="message"></div>
+          </section>
+        </div>
+      </section>
+      <main>
+        <h1>Project 2</h1>
+        <div class="authenticated">
+          <button id="index-post" type="submit">Index posts</button>
+          <form id="find-post">
+            <input required type="text" name="posts[title]" placeholder="Title">
+            <button type="submit">Find Post</button>
+          </form>
+          <div class="posts"></div>
+          <form id="create-post">
+            <input required type="text" name="post[title]" placeholder="Post title">
+            <input required type="text" name="post[body]" placeholder="Post text">
+            <button type="submit">Create Post</button>
+          </form>
+          <form id="update-post">
+            <input required type="text" name="post[id]" placeholder="Post ID">
+            <input required type="text" name="post[title]" placeholder="Post title">
+            <input required type="text" name="post[body]" placeholder="Post text">
+            <button type="submit">Update Post</button>
+          </form>
+        </div>
+      </main>
+    </body>
+</html>
