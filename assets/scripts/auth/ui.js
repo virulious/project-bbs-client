@@ -80,15 +80,19 @@ const signOutSuccess = function (data) {
   store.user = null
 }
 
-const signOutFailure = function (error) {
+const signOutFailure = function () {
   $('.message').text('Error on sign out')
   messageSuccess()
-  console.error('signOutFailure ran. Error is :', error)
 }
 
 const indexPostSuccess = (data) => {
   const indexPostHtml = indexPostTemplate({ posts: data.posts })
   $('.posts').html(indexPostHtml)
+}
+
+const indexPostFailure = () => {
+  $('.message').text('Index Error')
+  messageSuccess()
 }
 
 const createPostSuccess = (data) => {
@@ -98,9 +102,19 @@ const createPostSuccess = (data) => {
   $('.posts').html(indexPostHtml)
 }
 
+const createPostFailure = () => {
+  $('.message').text('Error on create post')
+  messageSuccess()
+}
+
 const findPostSuccess = (data) => {
   const indexPostHtml = indexPostTemplate({ posts: data })
   $('.posts').html(indexPostHtml)
+}
+
+const findPostFailure = () => {
+  $('.message').text('Error on find post')
+  messageSuccess()
 }
 
 const updatePostSuccess = (data) => {
@@ -108,6 +122,16 @@ const updatePostSuccess = (data) => {
 
   const indexPostHtml = indexPostTemplate({ posts: data.posts })
   $('.posts').html(indexPostHtml)
+}
+
+const updatePostFailure = () => {
+  $('.message').text('Error on update post')
+  messageSuccess()
+}
+
+const deletePostFailure = () => {
+  $('.message').text('Error on delete post')
+  messageSuccess()
 }
 
 module.exports = {
@@ -122,5 +146,10 @@ module.exports = {
   indexPostSuccess,
   createPostSuccess,
   findPostSuccess,
-  updatePostSuccess
+  updatePostSuccess,
+  indexPostFailure,
+  createPostFailure,
+  findPostFailure,
+  updatePostFailure,
+  deletePostFailure
 }

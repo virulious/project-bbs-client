@@ -52,7 +52,7 @@ const onIndexPost = function (event) {
   event.preventDefault()
   api.indexPost()
     .then(ui.indexPostSuccess)
-    .catch(console.error)
+    .catch(ui.indexPostFailure)
 }
 
 const onCreatePost = function (event) {
@@ -64,7 +64,7 @@ const onCreatePost = function (event) {
   api.createPost(formData)
     .then(api.indexPost)
     .then(ui.createPostSuccess)
-    .catch(console.error)
+    .catch(ui.createPostFailure)
 }
 
 const onFindPost = function (event) {
@@ -76,7 +76,7 @@ const onFindPost = function (event) {
 
   api.findPost(title)
     .then(ui.findPostSuccess)
-    .catch(console.error)
+    .catch(ui.findPostFailure)
 }
 
 const onUpdatePost = function (event) {
@@ -88,7 +88,7 @@ const onUpdatePost = function (event) {
   api.updatePost(formData)
     .then(api.indexPost)
     .then(ui.updatePostSuccess)
-    .catch(console.error)
+    .catch(ui.updatePostFailure)
 }
 
 const onDeletePost = (event) => {
@@ -98,7 +98,7 @@ const onDeletePost = (event) => {
     .then(function () {
       onIndexPost(event)
     })
-    .catch(console.error)
+    .catch(ui.deletePostFailure)
 }
 
 module.exports = {
